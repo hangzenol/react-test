@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-content">
       <div className="dashboard-header">
-        <h1>Welcome to Your Dashboard</h1>
+        <h1>Welcome to Dashboard</h1>
       </div>
       <div className="dashboard-body">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis mauris eget ipsum convallis venenatis. Nulla facilisi. Sed sem diam, convallis et varius in, aliquet in est. Fusce congue enim vel sapien sodales, ac hendrerit enim hendrerit. Nam porta lorem nunc, ac laoreet nulla euismod in. Aliquam vitae tincidunt quam. Suspendisse a suscipit magna. Morbi auctor sapien in rutrum pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ultrices est sed eleifend lacinia.</p>
