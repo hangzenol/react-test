@@ -3,7 +3,8 @@ import './Sidebar.css';
 import {
     FaBars,
     FaTh,
-    FaUserAlt
+    FaUserAlt,
+    FaCalendar
 } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
@@ -21,6 +22,11 @@ const Sidebar = ({children}) => {
             path: "/about",
             name: "About",
             icon: <FaUserAlt/>
+        },
+        {
+            path: "/calendar",
+            name: "Calendar",
+            icon: <FaCalendar/>
         },
     ]
     return (
