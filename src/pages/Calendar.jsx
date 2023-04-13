@@ -1,59 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Calendar.css';
 
 const Calendar = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  const days = [
-    "Sun", 
-    "Mon", 
-    "Tue", 
-    "Wed", 
-    "Thu", 
-    "Fri", 
-    "Sat"
-    ];
-
   const today = new Date();
   const currentMonth = today.getMonth();
   const currentYear = today.getFullYear();
-
-  const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date(currentYear, currentMonth));
-
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-  const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
 
-  const daysArray = [...Array(firstDay ? firstDay - 1 : 6).fill(null), ...Array(daysInMonth).fill().map((_, index) => index + 1)];
-
-  const handleSelectDate = (day) => {
-    setSelectedDate(day);
+  const days = [];
+  for (let i = 1; i <= daysInMonth; i++) {
+    days.push(i);
   }
 
   return (
     <div className="calendar">
-        <div className='main'>
-            <h1>Calendar</h1>
-        </div>
-      <div className="month">{monthName} {currentYear}</div>
-      <div className="weekdays">
-        {days.map((day) => (
-          <div key={day}>{day}</div>
-        ))}
+      <div className="calendar-header">
+        <h1>Calendar</h1>
+        <div>{today.toLocaleDateString("en-MY", options)}</div>
       </div>
-      <div className="days">
-        {daysArray.map((day) => (
+      <div className="days-of-week">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div className="calendar-grid">
+        {days.map((day) => (
           <div
             key={day}
-            className={`day ${day ? '' : 'null'} ${selectedDate === day ? 'selected' : ''}`}
-            onClick={() => handleSelectDate(day)}
+            className={`calendar-day ${day === today.getDate() ? 'active' : ''}`}
           >
             {day}
           </div>
         ))}
       </div>
-      {selectedDate && (
-        <div className="selected-date">Date: {selectedDate} {monthName} {currentYear}</div>
-      )}
     </div>
   );
 };
