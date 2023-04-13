@@ -11,8 +11,8 @@
     padding: 20px;
   }
   .sidebar {
-    background: #000;
-    color: #fff;
+    background: #00a4aa;
+    color: rgb(255, 255, 255);
     height: 100vh;
     width: 300px;
     transition: all 0.5s;
@@ -32,19 +32,19 @@
   }
   .link {
     display: flex;
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 5px 15px;
     gap: 15px;
     transition: all 0.5s;
   }
   .link-hover {
-    background: lightskyblue;
-    color: #000;
+    background: rgb(255, 255, 255);
+    color: #00a4aa;
     transition: all 0.5s;
   }
   .active {
-    background: lightskyblue;
-    color: #000;
+    background: rgb(255, 255, 255);
+    color: #00a4aa;
   }
   .icon, .link_text {
     font-size: 20px;
