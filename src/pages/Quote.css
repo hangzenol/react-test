@@ -1,0 +1,40 @@
+.quote-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+  }
+  
+  .quote-page h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quote {
+    border: 2px solid #ccc;
+    padding: 16px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .quote p:first-of-type {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .quote p:last-of-type {
+    font-size: 18px;
+    text-align: right;
+  }
+  

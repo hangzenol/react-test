@@ -4,7 +4,8 @@ import {
     FaBars,
     FaTh,
     FaUserAlt,
-    FaCalendar
+    FaCalendar,
+    FaQuoteLeft
 } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
@@ -27,6 +28,11 @@ const Sidebar = ({children}) => {
             path: "/calendar",
             name: "Calendar",
             icon: <FaCalendar/>
+        },
+        {
+            path: "/quote",
+            name: "Quote",
+            icon: <FaQuoteLeft/>
         },
     ]
     return (
